@@ -22,3 +22,11 @@
 a.active{
   @apply bg-base-300 text-blue-600
 }
+/* styles.css or index.css */
+.card-gradient-shadow {
+  position: relative;
+  /* z-index: 0; */
+  /* opacity: 0; */
+}
+
+

@@ -10,7 +10,7 @@ const Categories = () => {
     console.log(categories);
     return (
         <div>
-            <h2 className='font-bold'>All Categories : {categories.length}</h2>
+            <h2 className='font-bold text-center'>All Categories</h2>
             <div className='grid gap-3 mt-6 grid-cols-1'>
                 {
                     categories.map(category=><NavLink 
