@@ -9,7 +9,7 @@ const NewsCard = ({news}) => {
     const { title, author, published_date, thumbnail_url, details, rating, total_view,tags}=news;
     const formattedDate=new Date(news.author.published_date).toLocaleDateString();
     return (
-        <div className='border border-1 hover:shadow-indigo-200 hover:border-gray-400 transition-shadow duration-100 hover:shadow-2xl border-gray-200 rounded-md '>
+        <div className='border border-1 hover:shadow-blue-200 hover:border-gray-300 transition-shadow duration-100 hover:shadow-2xl border-gray-200 rounded-md '>
             <div className='flex rounded-t-md bg-gray-100 justify-between items-center p-5 mb-2'>
                 <div className='flex gap-5'>
                     <img className='w-[42px] rounded-[100%]' src={author.img} alt="" />
