@@ -3,10 +3,11 @@ import { IoStarOutline } from "react-icons/io5";
 import { IoEyeSharp } from "react-icons/io5";
 import { FaRegBookmark } from "react-icons/fa";
 import { FaShareAlt } from "react-icons/fa";
+import { Link } from 'react-router';
 
 
 const NewsCard = ({news}) => {
-    const { title, author, published_date, thumbnail_url, details, rating, total_view,tags}=news;
+    const { title, id, author, published_date, thumbnail_url, details, rating, total_view,tags}=news;
     const formattedDate=new Date(news.author.published_date).toLocaleDateString();
     return (
         <div className='border border-1 hover:shadow-blue-200 hover:border-gray-300 transition-shadow duration-100 hover:shadow-2xl border-gray-200 rounded-md '>
@@ -31,9 +32,9 @@ const NewsCard = ({news}) => {
                 <p className='my-5 text-justify pb-5 border-gray-300 border-b text-gray-500'>{details.length>200 ? (
                     <>
                         {details.slice(0,200)}...
-                        <span className='text-secondary font-semibold cursor-pointer hover:underline'>
+                        <Link to={`/news-details/${id}`} className='text-secondary font-semibold cursor-pointer hover:underline'>
                             Read More
-                        </span>
+                        </Link>
                     </>
                 ):(
                     details
