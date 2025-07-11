@@ -14,14 +14,13 @@ const NewsDetailsCard = ({news, data}) => {
             <p className='text-justify text-accent'>
                 {details}
             </p>
-            <div className='mt-8 hover:cursor-pointer hover:bg-red-600 bg-secondary mb-4 px-5 py-3 inline-block'>
-                <Link to={`/category/${news.category_id}`}>
+            
+                <Link className='mt-8 hover:cursor-pointer hover:bg-red-600 bg-secondary mb-4 px-5 py-3 inline-block' to={`/category/${news.category_id}`}>
                     <div className='flex text-white font-semibold items-center gap-4'>
                             <div><FaArrowLeftLong/></div>
                             <p>All news in this category</p>
                     </div>
             </Link>
-            </div>
            
         </div>
     );

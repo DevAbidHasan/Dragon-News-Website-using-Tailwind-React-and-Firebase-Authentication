@@ -22,9 +22,7 @@ const Navbar = () => {
                 <NavLink to="/career">Career</NavLink>
             </div>
             <div className="login-btn flex items-center gap-5 justify-center">
-                <img src={userIcon} alt="" />
-
-
+                <img className='w-[50px]' src={`${user ? user.photoURL : userIcon }`} alt="" />
                 {
                     user ? 
                     ((
